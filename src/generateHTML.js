@@ -2,31 +2,31 @@
 
 const generateTeam = team => {
 
-const generateManager = Manager => {
-    return `
-      <<div class="card" "col-4">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">${Manager.getName()}</h5>
-        <p class="card-text"><i class="fas fa-mug-hot"></i>${Manager.getRole()}</p>
+    const generateManager = Manager => {
+        return `
+      <<div class="card" "col-3">
+      
+      <div class="card-body bg-primary">
+        <h3 class="card-title text-white">${Manager.getName()}</h3>
+        <p class="card-text text-white"><i class="fas fa-mug-hot"></i>${Manager.getRole()}</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">${Manager.getId()}</li>
-        <li class="list-group-item">${Manager.getEmail()}</li>
-        <li class="list-group-item">${Manager.getOfficeNumber()}</li>
+        <li class="list-group-item">ID  ${Manager.getId()}</li>
+        <li class="list-group-item">email  ${Manager.getEmail()}</li>
+        <li class="list-group-item">Office Number ${Manager.getOfficeNumber()}</li>
       </ul>
       
     </div>`
 
-};
-          
-const generateEngineer = Engineer => {
-    return `
-      <<div class="card" "col-4">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">${Engineer.getName()}</h5>
-        <p class="card-text"><i class="fas fa-mug-hot"></i>${Engineer.getRole()}</p>
+    };
+
+    const generateEngineer = Engineer => {
+        return `
+      <<div class="card" "col-3">
+      
+      <div class="card-body bg-primary ">
+        <h3 class="card-title text-white">${Engineer.getName()}</h3>
+        <p class="text-white"><i class="fas fa-glasses"></i>${Engineer.getRole()}</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">${Engineer.getId()}</li>
@@ -36,15 +36,15 @@ const generateEngineer = Engineer => {
       
     </div>`
 
-}; 
-        
-const generateIntern = Intern => {
-    return `
-      <<div class="card" "col-4">
-      <img src="..." class="card-img-top" alt="...">
+    };
+
+    const generateIntern = Intern => {
+        return `
+      <<div class="card" "col-3" >
+     
       <div class="card-body">
         <h5 class="card-title">${Intern.getName()}</h5>
-        <p class="card-text"><i class="fas fa-mug-hot"></i>${Intern.getRole()}</p>
+        <p class="card-text"><i class="fas fa-user-graduate"></i></i>${Intern.getRole()}</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">${Intern.getId()}</li>
@@ -54,18 +54,18 @@ const generateIntern = Intern => {
       
     </div>`
 
-}; 
-const html = [];
-html.push(team.filter(item => item.getRole() === "Engineer").map(engineer => generateEngineer(engineer))  );
+    };
+    const html = [];
 
-  html.push(team.filter(item => item.getRole() === "Manager").map(manager => generateManager(manager))  );
+    html.push(team.filter(item => item.getRole() === "Manager").map(manager => generateManager(manager)));
+
+    html.push(team.filter(item => item.getRole() === "Engineer").map(engineer => generateEngineer(engineer)));
+
+    html.push(team.filter(item => item.getRole() === "Intern").map(intern => generateIntern(intern)));
 
 
-    html.push(team.filter(item => item.getRole() === "Intern").map(intern => generateIntern(intern))  );
 
-
-
-  return html.join('');
+    return html.join('');
 }
 
 
@@ -76,7 +76,7 @@ html.push(team.filter(item => item.getRole() === "Engineer").map(engineer => gen
 
 function generateTeamPage(team) {
 
-    return`
+    return `
         < !DOCTYPE html >
             <html lang="en">
 
@@ -87,24 +87,36 @@ function generateTeamPage(team) {
                                 <title>Portfolio Demo</title>
                                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
                                     <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
+                                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+                                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
                                         <link rel="stylesheet" href="style.css">
                                         </head>
 
                                         <body>
                                             <header>
-                                                <div class="container flex-row justify-space-between align-center py-3">
-                                                    <h1 class="pate-title text-secondary .bg-danger .text-light py-2 px-3">My Team</h1>
+                                                <div class="container bg-danger text-light ">
+                                                    <h1 class="justify-center">My Team</h1>
 
                                                 </div>
                                             </header>
+                                            
                                             <main class="container my-5">
-                                            ${generateTeam(team)} 
+                                                <div class= "row justify-content-around mx-3">
+
+                                                 ${generateTeam(team)} 
+                                                </div>
                                             </main>
 
                                         </body>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                                        <script src="./assets/js/script.js"></script>
 
                                     </html>
                             `;
 
 }
-                                    module.exports = generateTeamPage;
+module.exports = generateTeamPage;
