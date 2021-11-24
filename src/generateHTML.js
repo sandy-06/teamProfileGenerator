@@ -2,9 +2,9 @@
 
 const generateTeam = team => {
 
-    const generateManager = Manager => {
-        return `
-      <<div class="card" "col-3">
+  const generateManager = Manager => {
+    return `
+      <div class="card" "col-3">
       
       <div class="card-body bg-primary">
         <h3 class="card-title text-white">${Manager.getName()}</h3>
@@ -18,11 +18,11 @@ const generateTeam = team => {
       
     </div>`
 
-    };
+  };
 
-    const generateEngineer = Engineer => {
-        return `
-      <<div class="card" "col-3">
+  const generateEngineer = Engineer => {
+    return `
+      <div class="card" "col-3">
       
       <div class="card-body bg-primary ">
         <h3 class="card-title text-white">${Engineer.getName()}</h3>
@@ -36,15 +36,15 @@ const generateTeam = team => {
       
     </div>`
 
-    };
+  };
 
-    const generateIntern = Intern => {
-        return `
-      <<div class="card" "col-3" >
+  const generateIntern = Intern => {
+    return `
+      <div class="card" "col-3" >
      
-      <div class="card-body">
-        <h5 class="card-title">${Intern.getName()}</h5>
-        <p class="card-text"><i class="fas fa-user-graduate"></i></i>${Intern.getRole()}</p>
+      <div class="card-body bg-primary">
+        <h3 class="card-title test-white">${Intern.getName()}</h3>
+        <p class="card-text text-white"><i class="fas fa-user-graduate"></i></i>${Intern.getRole()}</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">${Intern.getId()}</li>
@@ -54,18 +54,18 @@ const generateTeam = team => {
       
     </div>`
 
-    };
-    const html = [];
+  };
+  const html = [];
 
-    html.push(team.filter(item => item.getRole() === "Manager").map(manager => generateManager(manager)));
+  html.push(team.filter(item => item.getRole() === "Manager").map(manager => generateManager(manager)));
 
-    html.push(team.filter(item => item.getRole() === "Engineer").map(engineer => generateEngineer(engineer)));
+  html.push(team.filter(item => item.getRole() === "Engineer").map(engineer => generateEngineer(engineer)));
 
-    html.push(team.filter(item => item.getRole() === "Intern").map(intern => generateIntern(intern)));
+  html.push(team.filter(item => item.getRole() === "Intern").map(intern => generateIntern(intern)));
 
 
 
-    return html.join('');
+  return html.join('');
 }
 
 
@@ -76,15 +76,15 @@ const generateTeam = team => {
 
 function generateTeamPage(team) {
 
-    return `
-        < !DOCTYPE html >
+  return `
+        <!DOCTYPE html>
             <html lang="en">
 
                 <head>
                     <meta charset="UTF-8">
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                                <title>Portfolio Demo</title>
+                                <title>My Team</title>
                                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
                                     <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
                                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
@@ -95,8 +95,9 @@ function generateTeamPage(team) {
                                         <body>
                                             <header>
                                                 <div class="container bg-danger text-light ">
+                                                <br>
                                                     <h1 class="justify-center">My Team</h1>
-
+                                                    <br>
                                                 </div>
                                             </header>
                                             
