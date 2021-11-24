@@ -43,7 +43,7 @@ const generateTeam = team => {
       <div class="card" "col-3" >
      
       <div class="card-body bg-primary">
-        <h3 class="card-title test-white">${Intern.getName()}</h3>
+        <h3 class="card-title text-white">${Intern.getName()}</h3>
         <p class="card-text text-white"><i class="fas fa-user-graduate"></i></i>${Intern.getRole()}</p>
       </div>
       <ul class="list-group list-group-flush">
