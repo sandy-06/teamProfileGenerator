@@ -137,4 +137,111 @@ Sandra Sanders
 can only be run using node.js commands
 video link 
 # installation 
-see above
+html file generated
+
+        <!DOCTYPE html>
+            <html lang="en">
+
+                <head>
+                    <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                                <title>My Team</title>
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+                                    <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
+                                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+                                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+                                        <link rel="stylesheet" href="style.css">
+                                        </head>
+
+                                        <body>
+                                            <header>
+                                                <div class="container bg-danger text-light ">
+                                                <br>
+                                                    <h1 class="justify-center">My Team</h1>
+                                                    <br>
+                                                </div>
+                                            </header>
+                                            
+                                            <main class="container my-5">
+                                                <div class= "row justify-content-around mx-3">
+
+                                                 
+      <div class="card" "col-3">
+      
+      <div class="card-body bg-primary">
+        <h3 class="card-title text-white">Sandra</h3>
+        <p class="card-text text-white"><i class="fas fa-mug-hot"></i>Manager</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">ID  123</li>
+        <li class="list-group-item">email  sandra@thisco.com</li>
+        <li class="list-group-item">Office Number 1</li>
+      </ul>
+      
+    </div>
+      <div class="card" "col-3">
+      
+      <div class="card-body bg-primary ">
+        <h3 class="card-title text-white">Bradely</h3>
+        <p class="text-white"><i class="fas fa-glasses"></i>Engineer</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">245</li>
+        <li class="list-group-item">bradely@thisco.com</li>
+        <li class="list-group-item">bradely-06</li>
+      </ul>
+      
+    </div>,
+      <div class="card" "col-3">
+      
+      <div class="card-body bg-primary ">
+        <h3 class="card-title text-white">James</h3>
+        <p class="text-white"><i class="fas fa-glasses"></i>Engineer</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">245</li>
+        <li class="list-group-item">James@thisco.com</li>
+        <li class="list-group-item">james-98</li>
+      </ul>
+      
+    </div>,
+      <div class="card" "col-3">
+      
+      <div class="card-body bg-primary ">
+        <h3 class="card-title text-white">April</h3>
+        <p class="text-white"><i class="fas fa-glasses"></i>Engineer</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">345</li>
+        <li class="list-group-item">april@thisco.com</li>
+        <li class="list-group-item">april-198</li>
+      </ul>
+      
+    </div>
+      <div class="card" "col-3" >
+     
+      <div class="card-body bg-primary">
+        <h3 class="card-title text-white">Carlos</h3>
+        <p class="card-text text-white"><i class="fas fa-user-graduate"></i></i>Intern</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">456</li>
+        <li class="list-group-item">carlos@thisco.com</li>
+        <li class="list-group-item">Gonzaga</li>
+      </ul>
+      
+    </div> 
+                                                </div>
+                                            </main>
+
+                                        </body>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                                        <script src="./assets/js/script.js"></script>
+
+                                    </html>
+                            
