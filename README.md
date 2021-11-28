@@ -129,3 +129,10 @@ You are required to submit the following for review:
 
 - - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+# contributing
+Sandra Sanders
+# useage
+can only be run using node.js commands
+video link 
+# installation 
+see above
